@@ -24,9 +24,10 @@ contract smartPromiseContract {
             block.difficulty, block.timestamp, block.coinbase))) % 2**160; 
             //generates a random number to use as a identifier
         newPromise.promiseAcceptDeadline = block.timestamp + 10 minutes;
-        newPromise.promiseParticipators = new address[](1);
-        newPromise.promiseParticipators[0] = msg.sender; // want to add addresses to array promiseParticipator
         smartPromises.push(newPromise);
+        promiseData storage arrPushPromise = smartPromises[smartPromises.length - 1];
+        arrPushPromise.promiseParticipators.push(msg.sender);
+        
     }
 
 
@@ -59,5 +60,13 @@ contract smartPromiseContract {
 
     function emptyPromiseData() public {
         delete smartPromises;
+    }
+
+    function showPromiseParticipants(uint _promiseUID) public view returns(address[] memory) {
+        for (uint i = 0; i < smartPromises.length; i++) {
+            if (smartPromises[i].promiseIdentifier == _promiseUID) {
+                return smartPromises[i].promiseParticipators;
+            }
+        }
     }
 }
