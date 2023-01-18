@@ -28,6 +28,8 @@ let joinPromiseDiv = document.createElement("div")
 let endPromiseDiv = document.createElement("div")
 let navigationMenu = document.createElement("div");
 let currencyDiv = document.createElement("div");
+let lines = document.createElement("div")
+
 
 
 
@@ -56,6 +58,7 @@ createPromiseDivExitBtn.id = "createPromiseDivExitBtn";
 joinPromiseDivExitBtn.id = "joinPromiseDivExitBtn";
 endPromiseDivExitBtn.id = "endPromiseDivExitBtn";
 currencyDiv.id = "currencyDiv";
+lines.id = "lines"
 
 //sets placeholder
 titleInput.placeholder = "Title for promise";
@@ -77,11 +80,11 @@ walletConnectBtn.innerText = "Connect Wallet";
 createPromiseBtn.innerText = "Create SmartPromise";
 joinPromiseBtn.innerText = "Join SmartPromise";
 endPromiseBtn.innerText = "End SmartPromise";
-navCreateBtn.innerText = "Create a promise"
+navCreateBtn.innerText = "Create promise"
 
-navJoinBtn.innerText = "Join a promise"
+navJoinBtn.innerText = "Join promise"
 
-navEndBtn.innerText = "End a promise"
+navEndBtn.innerText = "End promise"
 createPromiseDivExitBtn.innerText = "X"
 joinPromiseDivExitBtn.innerText = "X"
 endPromiseDivExitBtn.innerText = "X"
@@ -91,7 +94,7 @@ endPromiseDivExitBtn.innerText = "X"
 document.body.append(otherContentWrapper, walletConnectBtn)
 
 otherContentWrapper.append(/*walletConnectBtn, */navigationMenu, createPromiseDiv, joinPromiseDiv, endPromiseDiv, currencyDiv);
-navigationMenu.append(navCreateBtn, navJoinBtn, navEndBtn )
+navigationMenu.append(navCreateBtn, navJoinBtn, navEndBtn, lines )
 
 createPromiseDiv.append(titleInput, valueInput, createPromiseBtn, createPromiseDivExitBtn)
 joinPromiseDiv.append(uidInput, joinPromiseValue, joinPromiseBtn, joinPromiseDivExitBtn)
@@ -299,21 +302,36 @@ async function createLandingPage() {
 	restOfPage.style.pointerEvents = "none";
     // Show the "Connect" button
     walletConnectBtn.style.filter = "blur(0)";
-	walletConnectBtn.addEventListener("click", async () => {
-        await connectMetamask();
-        if (signer.getAddress()) {
-			localStorage.setItem("signer signed", signer.getAddress())
-            console.log("Signer has successfully signed in!");
-            const restOfPage = document.getElementById("otherContentWrapper");
-            restOfPage.style.filter = "blur(0)";
-            restOfPage.style.pointerEvents = "auto";
-            walletConnectBtn.style.right = "0";
-            walletConnectBtn.style.top = "0";
-            walletConnectBtn.innerText = "Wallet Connected";
-        } else {
-            console.log("Signer is not connected or has not granted access.");
-        }
-    });
+
+	async function connectMetamask() {
+		return new Promise( (resolve, reject) => {
+			// function code
+			resolve() // or reject() 
+		});
+	 }
+	 
+	 walletConnectBtn.addEventListener("click", async () => {
+		await connectMetamask().then(() => {
+		  if (signer.getAddress()) {
+			 localStorage.setItem("signer signed", signer.getAddress())
+			 console.log("Signer has successfully signed in!");
+			 const restOfPage = document.getElementById("otherContentWrapper");
+			 restOfPage.style.filter = "blur(0)";
+			 restOfPage.style.pointerEvents = "auto";
+			 walletConnectBtn.style.right = "0";
+			 walletConnectBtn.style.top = "0";
+			 walletConnectBtn.innerText = "Wallet Connected";
+		  } else {
+			 console.log("Signer is not connected or has not granted access.");
+		  }
+		});
+	 });
+	 
+	 
+	 
+	 
+	 
+	 
 }
 
 
