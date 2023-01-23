@@ -1,4 +1,4 @@
-Copyright (C) 2023 Jack Smith Insulander, Felipe Stiernhoff, Maximiliano Cid, and Philip Andelic
+Copyright (C) 2023 Jack Smith Insulander, Felipe Stiernhoff, Maximiliano Cid, and Mirelle Wallgren
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by

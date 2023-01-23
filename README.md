@@ -1,40 +1,45 @@
-# SmartPromise
-A decentralized application for creating and signing trustworthy promises using smart contract technology on the Ethereum blockchain.
+<h1>Smart promise - because you don’t want to lose your pinky ;)</h1>
+<p><b>Epic: </b>
 
-## Project Description
-SmartPromise is a platform for creating and signing promises using smart contract technology on the Ethereum blockchain. Our goal is to revolutionize the DeFi space by providing trustworthy tools for engaging in trustless financial transactions.
+<b>Introduction:</b>
+This dapp will allow people to verify promises, and make sure they are kept - digitally!
+Our research shows that 99.9% of all pinky-promises aren't kept.
+We expect the use of this dapp to be simple to learn and easy for the broad public to understand.
+This will skyrocket the amount of promises kept.
+People will no longer have to rely on ‘gut feeling’ when going into agreements.
+Ideally, this can be used to build a safer, decentralized and transparent economy. For everyone.
+Meanwhile, the MVP is focused allowing two participants to make functioning Smart Promises with help of our smart contract, on the blockchain.
 
-## Table of Contents
-- Installation
-- Usage
-- Features
-- Credits
-- License
-- Badges
+<b>Product Requirements:</b>
+The user can visit the Smart Promise application and website.
+The user can log in with Metamask.
+The user can create a custom contract.
+The user can deposit money into the smart contract.
+The user can create a Smart Promise link with an unique ID to send to the other participant.
+The contract has a timer for 10 minutes with an exp. date.
+The (other) user can accept and sign the Smart Promise with Metamask.
+The contract is able to send money back to its depositors.
 
-## Installation
-1. Install Metamask browser extension or mobile app to connect to the Ethereum network.
-2. Access the SmartPromise dApp at smartpromise.com
-3. Use Metamask to log in and interact with the smart contract on the Ethereum network.
 
-## Usage
-1. Create a new SmartPromise by depositing a collateral in ETH and providing a title for the promise.
-2. Share the unique promise ID with the other participant.
-3. The other participant can then accept the promise within 10 minutes by depositing the same collateral and signing the promise using Metamask.
-4. Once all participants have signed the promise, the contract can release the collateral to all participants.
+<b>Design requirements:</b>
+The site should be simple and easy to understand and orient around.
+The site should have an appealing, clean design.
 
-## Features
-- Create and sign promises using smart contract technology on the Ethereum blockchain.
-- 10 minute time limit for accepting promises.
-- Unique promise ID for easy sharing with other participants.
-- Secure and trustless financial transactions.
 
-## License
+<b>User stories:</b> <br>
+As a user living in the modern day and digital age, I want to create trustless contracts with people I’m not sure I trust without having to worry about it. 
 
-Copyright (C) 2023 Jack Smith Insulander, Felipe Stiernhoff, Maximiliano Cid, and Philip Andelic
+As someone who’s about to get married, I want my prenup set in stone on the blockchain, so there can’t be any backtracking when it finally comes to the divorce. 
 
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+As someone who loves working out and making bets, I want to really challenge and motivate my fellow gym bro to go to the gym with me every day for a week. If there’s money in the game, then it’s serious business. 
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+As the leader of a developer team, I don’t want to get screwed over by scammy employers when being hired for seasonal projects.
+</p>
 
-You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/.
+<p>This project was made by: </p><br>
+<ul>
+<li>Felipe</li>
+<li>Mirelle</li>
+<li>Max</li>
+<li>Jack</li>
+</ul>
